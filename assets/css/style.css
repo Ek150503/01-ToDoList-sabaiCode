@@ -1,0 +1,268 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 1rem;
+}
+
+/* input,
+label{
+    display: block;
+} */
+
+
+
+select {
+	appearance: none;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+
+/* main conatiner */
+
+.container{
+    margin: 0 auto;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    background-color: #fff;
+}
+
+/* stlyle for the right conatiner one */
+
+.container__right {
+    padding: 1rem;
+    /* text-align: center; */
+    background-color: 
+    #94a3b8;
+}
+
+.container__right h3{
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+
+
+
+/* stlye for the form */
+.container__right__form {
+    margin-top: 1.5rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* style for the first input, task nake */
+
+.container__right__form-control:first-child {
+grid-column: span 2;
+}
+
+.container__right__form-control:first-child label{
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.container__right__form-control:first-child input{
+    border: none;
+    width: 100%;
+    padding: 1rem;
+}
+
+.container__right__form-control:first-child input:focus{
+    outline: none;
+}
+
+/* style for pick an option */
+.container__right__form-control h3 {
+    font-size: 0.9rem;
+    text-transform: capitalize;
+    font-weight: 400;
+    margin-bottom: 0.8rem;
+}
+
+.container__right__form-control label {
+    font-size: 0.95rem;
+}
+/* style for the choose time */
+.container__right__time{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.container__right__form-control-time select{
+    width: 100%;
+    height: 5vh;
+    border-radius: 0.2rem;
+    border: none;
+    text-align: center;
+}
+
+.container__right__form-control-time .hour{
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.container__right__form-control-time{
+    position: relative;
+}
+
+.container__right__form-control-time::after {
+    position: absolute;
+    content: "HOURS";
+    display: block;
+    font-size: 0.6rem;
+    top: 15%;
+    right: -5%;
+    z-index: 11;
+    
+
+}
+.container__right__form-control-time:nth-child(2)::after {
+    content: "MINS";
+    right: 5%;
+}
+
+.container__right__form-control-time:last-child::after {
+    content: "SECS";
+    right: 5%;
+}
+.container__right__form-control-time .minute{
+    border-radius: 0;
+}
+
+.container__right__form-control-time .second{
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+
+
+/* style for button in form conatiner */
+.container__right__from-btn{
+    grid-column: span 2;
+}
+
+.container__right__from-btn .submit {
+    width: 100%;
+    border: none;
+    padding: 0.7rem 0;
+    border-radius: 0.2rem;
+    margin: 1rem 0;
+    background-color: #e01f93;
+    color: #fff;
+    transition: all 0.15s;
+}
+
+.container__right__from-btn .submit:hover,.container__right__from-btn .submit:active{
+    background-color: rgba(224, 31, 147, 0.76);
+}
+
+/* style for list items */
+.container__right__list {
+    /* background-color: #fff; */
+    margin-top: 2rem;
+}
+
+.container__right__list h3{
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.container__right__List-items {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.container__right__list-item{
+    padding: 0.8rem 0.5rem;
+    background-color: #fff;
+    border-radius: 0.2rem;
+}
+
+
+.container__right__list{
+    height: 50vh;
+    overflow-y: hidden;
+    overflow: scroll;
+}
+/* style for the left container one */
+.container__left {
+    background-color:#f1f5f9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.container__left__timer{
+    padding: 1.5rem 2.5rem;
+    border: 1px solid #94a3b8;
+    display: flex;
+    gap: 1rem;
+}
+
+.container__left__btns {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.container__left__btns .btn {
+    padding: 0.4rem 0.8rem;
+    color: #fff;
+    border: none;
+    border-radius: 0.2rem;
+}
+
+i {
+    font-size: 0.8rem;
+    margin-right: 1rem;
+}
+
+
+
+.start {
+    background-color: #16a34a;
+}
+.start:hover, .start:active{
+    background-color: rgba(22, 163, 74,0.75);
+}
+.stop {
+    background-color: #16a34a;
+}
+.stop:hover, .stop:active{
+    background-color: rgba(22, 163, 74,0.75);
+}
+.cancel {
+    background-color:#dc2626;
+}
+.cancel:hover, .cancel:active{
+    background-color: rgba(220, 38, 38, 0.75);
+}
+.complete {
+    background-color:#2563eb;
+}
+.complete:hover, .complete:active{
+    background-color: rgba(37, 99, 235,0.57);
+}
+
+
+
+@media screen  and (max-width: 1057px){
+    .container{
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
